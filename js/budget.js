@@ -21,7 +21,7 @@ function totalCalculation(playerExpenseTotal) {
   const totalCalculationBtn = document.getElementById("totalCalculationBtn");
   const totalExpense = document.getElementById("total-expense");
 
-  //   managerExpense.value = "";
+  //   managerExpense.innerText = "";
   //   coachExpense.value = "";
 
   totalCalculationBtn.addEventListener("click", function () {
