@@ -4,6 +4,7 @@ function selectBtn(btn) {
   const title = btn.parentNode.parentNode.children[0].innerText;
 
   const selectedPlayer = document.getElementById("selected-player");
+
   selectedPlayer.innerText = "";
 
   const playerName = {
@@ -13,8 +14,6 @@ function selectBtn(btn) {
   selectPlayer.push(playerName);
 
   for (let i = 0; i < selectPlayer.length; i++) {
-    console.log(selectPlayer[i]);
-
     const tr = document.createElement("tr");
 
     tr.innerHTML = `
@@ -23,6 +22,7 @@ function selectBtn(btn) {
 
     selectedPlayer.appendChild(tr);
   }
+  btn.classList.add("btn-disabled");
 
-  console.log(selectPlayer.length);
+  calcPerPlayerExpense(selectPlayer);
 }
