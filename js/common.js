@@ -1,7 +1,7 @@
 function selectPlayerLoop(btn, selectPlayer) {
   const selectedPlayer = document.getElementById("selected-player");
 
-  // selectedPlayer.innerText = "";
+  selectedPlayer.innerText = "";
 
   for (let i = 0; i < selectPlayer.length; i++) {
     const tr = document.createElement("tr");
