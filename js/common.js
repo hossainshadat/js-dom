@@ -1,21 +1,17 @@
 function selectPlayerLoop(btn, selectPlayer) {
   const selectedPlayer = document.getElementById("selected-player");
-
-  selectedPlayer.innerText = "";
+  const tr = document.createElement("tr");
 
   for (let i = 0; i < selectPlayer.length; i++) {
-    const tr = document.createElement("tr");
-
     if (!(selectPlayer.length <= 5)) {
       alert("Please select maximum 5 Player ");
-      break;
+      return;
     } else {
       tr.innerHTML = `
-        <th>${i + 1}</th>
-        <td>${selectPlayer[i].title}</td>`;
+      <th>${i + 1}</th>
+      <td>${selectPlayer[i].title}</td>`;
       btn.classList.add("btn-disabled");
     }
-
-    selectedPlayer.appendChild(tr);
   }
+  selectedPlayer.appendChild(tr);
 }
